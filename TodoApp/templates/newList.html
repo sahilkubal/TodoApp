@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/static/css/login.css">
+        <title>Add New List | Todo</title>
+    </head>
+
+    <body>
+        <div class="container-flex">
+            {% include 'nav.html' %}
+            <div style="width:auto;" class="division position-absolute top-50 start-50 translate-middle px-3 py-4">
+                <div class="heading d-flex justify-content-center">
+                    <h3>Add new List</h3>
+                </div>
+                <hr>
+                <form method="post" class="pt-3">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="">
+                            <label for="title" class="form-label fw-medium d-flex justify-content-center">Title</label>
+                            <input type="text" class="form-control border border-success" name="title" id="title"
+                                placeholder="Title" required>
+                        </div>
+                        <div class="">
+                            <label for="items" class="form-label fw-medium">Add Items</label>
+                            <input type="text" class="form-control border border-success" name="items" id="items"
+                                placeholder="Add items" required>
+                        </div>
+                    </div>
+                    <input class="btn-primary b mt-2" type="submit" value="Save">
+                </form>
+            </div>
+        </div>
+        <script src="/static/js/todo.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.js"></script>
+    </body>
+
+</html>

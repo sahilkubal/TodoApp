@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/static/css/login.css">
+        <title>Sign Up | Todo</title>
+    </head>
+
+    <body>
+        <div class="container-flex">
+            <div style="width:auto;" class="division position-absolute top-50 start-50 translate-middle px-3 py-4">
+                <div class="heading d-flex justify-content-center">
+                    <h3>Register</h3>
+                </div>
+                <hr>
+                <form method="post" class="pt-3">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="username" class="form-label fw-medium">Userame</label>
+                            <input type="text" class="form-control border border-success" id="username" name="username"
+                                placeholder="Username" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label fw-medium">Email</label>
+                            <input type="email" class="form-control border border-success" id="email" name="email"
+                                placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-medium">Password</label>
+                            <input type="password" class="form-control border border-success" name="password"
+                                id="password"
+                                placeholder="Must contains 8+ characters with letters, special characters, and numbers" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnf_password" class="form-label fw-medium">Confirm Password</label>
+                            <input type="password" class="form-control border border-success" name="cnf_password"
+                                id="cnf_password" required>
+                        </div>
+                    </div>
+                    <input class="btn-primary b mt-2" type="submit" value="Sign Up">
+                </form>
+                <div class="mt-3">
+                    <p class="d-flex justify-content-center">Already have an account?<a href="/login"> Sign
+                            In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="/static/bootstrap/js/bootstrap.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,16 @@
+.logo{
+    font-size: 100px;
+    font-weight: bolder;
+    margin-top: 25%;
+    color: rgba(95, 95, 95, 0.726);
+}
+
+p>span{
+    color: rgba(95, 95, 95, 0.89);
+    font-weight: bold;
+}
+
+p>span>a{
+    color: rgb(25, 153, 8);
+    text-decoration: none;
+}
